@@ -4,15 +4,17 @@ var students = [
   { id: 3, name: "alex",     age: 22 },
   { id: 4, name: "alex",     age: 30 }
 ];
-students.sort(function(a, b){
-    return a.age - b.age
-})
+
 students.sort(function(a, b){
     var nameA=a.name.toLowerCase(), nameB=b.name.toLowerCase()
-    if (nameA < nameB) //sort string ascending
+    if (nameA < nameB){ //sort string ascending
         return -1
-    if (nameA > nameB)
+    }
+    if (nameA > nameB){
         return 1
-    return 0 //default return value (no sorting)
+    }
+
+    return a.age - b.age
+
 })
 console.log (students)
